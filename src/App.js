@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./component/Header"
+import Body from "./component/Body"
+import Footer from "./component/Footer"
 
 function App() {
+  const Bodyprops = {
+    name: "clown1",
+    localStorage:"인천",
+    //favorList:["파스타","빵","떡볶이"],
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Body {...Bodyprops} />
+      <Footer />
     </div>
   );
 }
