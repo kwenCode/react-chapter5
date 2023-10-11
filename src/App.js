@@ -3,16 +3,17 @@ import Header from "./component/Header"
 import Body from "./component/Body"
 import Footer from "./component/Footer"
 
+function ChildCmp(){
+  return <div>child component</div>
+}
+
 function App() {
-  const Bodyprops = {
-    name: "clown1",
-    localStorage:"인천",
-    //favorList:["파스타","빵","떡볶이"],
-  }
   return (
     <div className="App">
       <Header />
-      <Body {...Bodyprops} />
+      <Body>
+        <ChildCmp />
+      </Body>
       <Footer />
     </div>
   );
